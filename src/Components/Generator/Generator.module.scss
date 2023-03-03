@@ -1,0 +1,76 @@
+//VARIABLES, MIXIN, COLORS AND SUCH ARE LOCATED IN VARIABLES FOLDER
+@import "/src/Variables/Variables.scss";
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    @include flex;
+    flex-direction: column;
+    text-align: center;
+    background: $main-bg-color;
+
+    
+    h1{
+        width: 15em;
+        padding: 0.3em;
+        font-size: $header-font;
+        margin-bottom: 0.5em;
+
+        @media (max-width: 768px) {
+            width: 80%;
+            font-size: $header-mobile-font;
+        }
+    }
+
+    button{
+        position: relative;
+        overflow: hidden;
+        font-size: $header2-font;
+        font-weight: 600;
+        padding: 1em 2em;
+        background: none;
+        border: 1px solid $light-text-color;
+        cursor: pointer;
+        margin-bottom: 2em;
+
+        &:hover{
+            color: $light-text-color;
+            background: $dark-text-color;
+            transition: 0.5s ease-in-out;
+
+            &::before{
+                left: 0;
+                z-index: -1;
+            }
+        
+        }
+
+       &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: $dark-text-color;
+        transition: left 0.5s ease-in-out;
+
+       }
+    }
+
+}
+
+.container{
+    width: 80%;
+    height: 60vh;
+    max-width: 900px;
+    @include flex;
+    background: $light-text-color;
+    border-radius: 20px;
+    margin-bottom: 1em;
+}
+
+p{
+    font-size: $paragraph-font;
+    padding: 1em 1.75em;
+}

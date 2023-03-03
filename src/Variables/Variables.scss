@@ -1,0 +1,17 @@
+//FONT-SIZES
+$header-font: 4rem;
+$header2-font: 1rem;
+$paragraph-font: 2rem;
+$header-mobile-font: 2.5rem;
+//COLORS
+$main-bg-color: #8c84f9;
+$dark-text-color: #333;
+$light-dark-color: #E8E8E8;
+$light-text-color: #FFF;
+
+//MIXINS
+@mixin flex(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
