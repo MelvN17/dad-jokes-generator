@@ -1,0 +1,19 @@
+//VARIABLES, MIXIN, COLORS AND SUCH ARE LOCATED IN VARIABLES FOLDER
+@import "/src/Variables/Variables.scss";
+
+.wrapper{
+    width: 100%;
+    height: auto;
+    background: $light-dark-color;
+    @include flex;
+    flex-direction: column;
+    
+    p{
+        font-size: 1.5rem;
+        padding: 0.4rem;
+    }
+
+    span{
+        color: #e25555;
+    }
+}
